@@ -1,6 +1,6 @@
 ﻿namespace pryFollentiSP1
 {
-    partial class Main
+    partial class frmMain
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,21 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnCrear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Main
+            // btnCrear
+            // 
+            this.btnCrear.Location = new System.Drawing.Point(70, 345);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(159, 56);
+            this.btnCrear.TabIndex = 0;
+            this.btnCrear.Text = "CREAR ARCHIVO";
+            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
+            // 
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Main";
+            this.ClientSize = new System.Drawing.Size(578, 450);
+            this.Controls.Add(this.btnCrear);
+            this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SP1";
+            this.Text = "SP1- manejo archivos";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnCrear;
     }
 }
 
