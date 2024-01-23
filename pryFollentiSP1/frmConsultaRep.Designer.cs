@@ -1,6 +1,6 @@
 ﻿namespace pryFollentiSP1
 {
-    partial class ConsultaRep
+    partial class frmConsultaRep
     {
         /// <summary>
         /// Required designer variable.
@@ -32,11 +32,11 @@
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.lblMarcaC = new System.Windows.Forms.Label();
-            this.cmbMarcaCon = new System.Windows.Forms.ComboBox();
+            this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.gbOrigen = new System.Windows.Forms.GroupBox();
-            this.optNac = new System.Windows.Forms.RadioButton();
-            this.optImp = new System.Windows.Forms.RadioButton();
             this.optAmbos = new System.Windows.Forms.RadioButton();
+            this.optImp = new System.Windows.Forms.RadioButton();
+            this.optNacional = new System.Windows.Forms.RadioButton();
             this.dgvRepuestos = new System.Windows.Forms.DataGridView();
             this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +66,7 @@
             this.btnConsultar.TabIndex = 1;
             this.btnConsultar.Text = "CONSULTAR";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnSalir
             // 
@@ -75,6 +76,7 @@
             this.btnSalir.TabIndex = 2;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // lblMarcaC
             // 
@@ -85,19 +87,19 @@
             this.lblMarcaC.TabIndex = 3;
             this.lblMarcaC.Text = "Marca:";
             // 
-            // cmbMarcaCon
+            // cmbMarca
             // 
-            this.cmbMarcaCon.FormattingEnabled = true;
-            this.cmbMarcaCon.Location = new System.Drawing.Point(113, 122);
-            this.cmbMarcaCon.Name = "cmbMarcaCon";
-            this.cmbMarcaCon.Size = new System.Drawing.Size(167, 27);
-            this.cmbMarcaCon.TabIndex = 4;
+            this.cmbMarca.FormattingEnabled = true;
+            this.cmbMarca.Location = new System.Drawing.Point(113, 122);
+            this.cmbMarca.Name = "cmbMarca";
+            this.cmbMarca.Size = new System.Drawing.Size(167, 27);
+            this.cmbMarca.TabIndex = 4;
             // 
             // gbOrigen
             // 
             this.gbOrigen.Controls.Add(this.optAmbos);
             this.gbOrigen.Controls.Add(this.optImp);
-            this.gbOrigen.Controls.Add(this.optNac);
+            this.gbOrigen.Controls.Add(this.optNacional);
             this.gbOrigen.Location = new System.Drawing.Point(33, 214);
             this.gbOrigen.Name = "gbOrigen";
             this.gbOrigen.Size = new System.Drawing.Size(597, 67);
@@ -105,16 +107,16 @@
             this.gbOrigen.TabStop = false;
             this.gbOrigen.Text = "Origen";
             // 
-            // optNac
+            // optAmbos
             // 
-            this.optNac.AutoSize = true;
-            this.optNac.Location = new System.Drawing.Point(39, 35);
-            this.optNac.Name = "optNac";
-            this.optNac.Size = new System.Drawing.Size(89, 23);
-            this.optNac.TabIndex = 0;
-            this.optNac.TabStop = true;
-            this.optNac.Text = "Nacional";
-            this.optNac.UseVisualStyleBackColor = true;
+            this.optAmbos.AutoSize = true;
+            this.optAmbos.Location = new System.Drawing.Point(362, 35);
+            this.optAmbos.Name = "optAmbos";
+            this.optAmbos.Size = new System.Drawing.Size(72, 23);
+            this.optAmbos.TabIndex = 2;
+            this.optAmbos.TabStop = true;
+            this.optAmbos.Text = "Ambos";
+            this.optAmbos.UseVisualStyleBackColor = true;
             // 
             // optImp
             // 
@@ -127,16 +129,16 @@
             this.optImp.Text = "Importado";
             this.optImp.UseVisualStyleBackColor = true;
             // 
-            // optAmbos
+            // optNacional
             // 
-            this.optAmbos.AutoSize = true;
-            this.optAmbos.Location = new System.Drawing.Point(362, 35);
-            this.optAmbos.Name = "optAmbos";
-            this.optAmbos.Size = new System.Drawing.Size(72, 23);
-            this.optAmbos.TabIndex = 2;
-            this.optAmbos.TabStop = true;
-            this.optAmbos.Text = "Ambos";
-            this.optAmbos.UseVisualStyleBackColor = true;
+            this.optNacional.AutoSize = true;
+            this.optNacional.Location = new System.Drawing.Point(39, 35);
+            this.optNacional.Name = "optNacional";
+            this.optNacional.Size = new System.Drawing.Size(89, 23);
+            this.optNacional.TabIndex = 0;
+            this.optNacional.TabStop = true;
+            this.optNacional.Text = "Nacional";
+            this.optNacional.UseVisualStyleBackColor = true;
             // 
             // dgvRepuestos
             // 
@@ -182,23 +184,26 @@
             this.colPrecio.Name = "colPrecio";
             this.colPrecio.ReadOnly = true;
             // 
-            // ConsultaRep
+            // frmConsultaRep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(642, 647);
+            this.ClientSize = new System.Drawing.Size(720, 647);
             this.Controls.Add(this.dgvRepuestos);
             this.Controls.Add(this.gbOrigen);
-            this.Controls.Add(this.cmbMarcaCon);
+            this.Controls.Add(this.cmbMarca);
             this.Controls.Add(this.lblMarcaC);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.pcbLogo);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "ConsultaRep";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.Name = "frmConsultaRep";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OSAKA - Consulta";
+            this.Load += new System.EventHandler(this.frmConsultaRep_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             this.gbOrigen.ResumeLayout(false);
             this.gbOrigen.PerformLayout();
@@ -214,11 +219,11 @@
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label lblMarcaC;
-        private System.Windows.Forms.ComboBox cmbMarcaCon;
+        private System.Windows.Forms.ComboBox cmbMarca;
         private System.Windows.Forms.GroupBox gbOrigen;
         private System.Windows.Forms.RadioButton optAmbos;
         private System.Windows.Forms.RadioButton optImp;
-        private System.Windows.Forms.RadioButton optNac;
+        private System.Windows.Forms.RadioButton optNacional;
         private System.Windows.Forms.DataGridView dgvRepuestos;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;

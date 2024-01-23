@@ -33,17 +33,17 @@
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.gbRepuestos = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.optNacional = new System.Windows.Forms.RadioButton();
-            this.optImportado = new System.Windows.Forms.RadioButton();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.cmbMarca = new System.Windows.Forms.ComboBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.optImportado = new System.Windows.Forms.RadioButton();
+            this.optNacional = new System.Windows.Forms.RadioButton();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.gbRepuestos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
@@ -58,7 +58,7 @@
             this.btnAceptar.TabIndex = 0;
             this.btnAceptar.Text = "ACEPTAR";
             this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnCrear_Click);
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -69,6 +69,7 @@
             this.btnCancelar.TabIndex = 1;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnConsultar
             // 
@@ -79,6 +80,7 @@
             this.btnConsultar.TabIndex = 2;
             this.btnConsultar.Text = "CONSULTAR";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnSalir
             // 
@@ -89,6 +91,7 @@
             this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // gbRepuestos
             // 
@@ -110,68 +113,29 @@
             this.gbRepuestos.TabStop = false;
             this.gbRepuestos.Text = "Repuestos";
             // 
-            // label1
+            // txtNombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Código:";
+            this.txtNombre.Location = new System.Drawing.Point(153, 94);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(185, 26);
+            this.txtNombre.TabIndex = 10;
             // 
-            // label2
+            // cmbMarca
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nombre:";
+            this.cmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMarca.FormattingEnabled = true;
+            this.cmbMarca.Location = new System.Drawing.Point(153, 147);
+            this.cmbMarca.Name = "cmbMarca";
+            this.cmbMarca.Size = new System.Drawing.Size(185, 27);
+            this.cmbMarca.TabIndex = 9;
             // 
-            // label3
+            // txtPrecio
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 147);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Marca:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 200);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 19);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Precio:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 253);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 19);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Origen:";
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(153, 41);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(185, 26);
-            this.txtCodigo.TabIndex = 5;
-            // 
-            // optNacional
-            // 
-            this.optNacional.AutoSize = true;
-            this.optNacional.Location = new System.Drawing.Point(120, 254);
-            this.optNacional.Name = "optNacional";
-            this.optNacional.Size = new System.Drawing.Size(89, 23);
-            this.optNacional.TabIndex = 6;
-            this.optNacional.TabStop = true;
-            this.optNacional.Text = "Nacional";
-            this.optNacional.UseVisualStyleBackColor = true;
+            this.txtPrecio.Location = new System.Drawing.Point(153, 198);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(185, 26);
+            this.txtPrecio.TabIndex = 8;
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // optImportado
             // 
@@ -184,27 +148,68 @@
             this.optImportado.Text = "Importado";
             this.optImportado.UseVisualStyleBackColor = true;
             // 
-            // txtPrecio
+            // optNacional
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(153, 198);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(185, 26);
-            this.txtPrecio.TabIndex = 8;
+            this.optNacional.AutoSize = true;
+            this.optNacional.Location = new System.Drawing.Point(120, 254);
+            this.optNacional.Name = "optNacional";
+            this.optNacional.Size = new System.Drawing.Size(89, 23);
+            this.optNacional.TabIndex = 6;
+            this.optNacional.TabStop = true;
+            this.optNacional.Text = "Nacional";
+            this.optNacional.UseVisualStyleBackColor = true;
             // 
-            // cmbMarca
+            // txtCodigo
             // 
-            this.cmbMarca.FormattingEnabled = true;
-            this.cmbMarca.Location = new System.Drawing.Point(153, 147);
-            this.cmbMarca.Name = "cmbMarca";
-            this.cmbMarca.Size = new System.Drawing.Size(185, 27);
-            this.cmbMarca.TabIndex = 9;
+            this.txtCodigo.Location = new System.Drawing.Point(153, 41);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(185, 26);
+            this.txtCodigo.TabIndex = 5;
             // 
-            // txtNombre
+            // label5
             // 
-            this.txtNombre.Location = new System.Drawing.Point(153, 94);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(185, 26);
-            this.txtNombre.TabIndex = 10;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(20, 253);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 19);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Origen:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(20, 200);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 19);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Precio:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(20, 147);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 19);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Marca:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 94);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 19);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Nombre:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Código:";
             // 
             // pcbLogo
             // 
@@ -231,9 +236,11 @@
             this.Controls.Add(this.btnAceptar);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SP1- manejo archivos";
+            this.Text = "OSAKA - Carga Repuestos";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.gbRepuestos.ResumeLayout(false);
             this.gbRepuestos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
